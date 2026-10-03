@@ -1,0 +1,757 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cream: #fff8f0;
+    --blush: #f7dce3;
+    --pink: #e8a4b5;
+    --gold: #b88a43;
+    --dark: #302624;
+    --soft-dark: #5d4b47;
+    --white: #ffffff;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    overflow: hidden;
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-area {
+    position: fixed;
+    top: 25px;
+    right: 35px;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.progress-line {
+    width: 80px;
+    height: 2px;
+    background: rgba(48, 38, 36, 0.15);
+}
+
+#progressBar {
+    width: 12.5%;
+    height: 100%;
+    background: var(--gold);
+    transition: width 0.5s ease;
+}
+
+
+/* =========================
+   SCREEN SYSTEM
+========================= */
+
+.screen {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 70px 25px 30px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateX(40px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        visibility 0.7s ease;
+}
+
+.screen.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+.center-content,
+.birthday-content,
+.message-content,
+.queen-content,
+.poem-content,
+.surprise-content,
+.wishes-content,
+.final-content {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.small-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+h1,
+h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+}
+
+button {
+    border: none;
+    background: var(--dark);
+    color: white;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    background: var(--gold);
+    box-shadow: 0 10px 25px rgba(184, 138, 67, 0.25);
+}
+
+
+/* =========================
+   SCREEN 1
+========================= */
+
+#screen1 {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(232, 164, 181, 0.25), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(184, 138, 67, 0.15), transparent 30%),
+        var(--cream);
+}
+
+#screen1 h1 {
+    font-size: clamp(70px, 12vw, 150px);
+    line-height: 0.8;
+    margin-bottom: 45px;
+}
+
+#screen1 h1 span {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.intro-text {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--soft-dark);
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   SCREEN 2
+========================= */
+
+#screen2 {
+    overflow-y: auto;
+}
+
+.birthday-content {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100%;
+    padding: 20px 0 40px;
+}
+
+.photo-frame {
+    width: 220px;
+    height: 280px;
+
+    margin: 0 auto 25px;
+
+    padding: 8px;
+
+    background: white;
+
+    box-shadow:
+        0 20px 60px rgba(48, 38, 36, 0.15);
+
+    transform: rotate(-2deg);
+
+    flex-shrink: 0;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.birthday-content .small-label {
+    margin-bottom: 15px;
+}
+
+.birthday-content h2 {
+    font-size: clamp(48px, 7vw, 80px);
+    line-height: 0.9;
+    margin-bottom: 15px;
+}
+
+.birthday-content h2 span {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.birthday-content > p:not(.small-label) {
+    color: var(--soft-dark);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.birthday-content button {
+    display: inline-block;
+
+    position: relative;
+    z-index: 20;
+
+    margin-top: 5px;
+
+    flex-shrink: 0;
+}
+
+
+/* Smaller laptop screens */
+
+@media (max-height: 800px) {
+
+    .photo-frame {
+        width: 175px;
+        height: 220px;
+        margin-bottom: 15px;
+    }
+
+    .birthday-content h2 {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+
+    .birthday-content > p:not(.small-label) {
+        margin-bottom: 12px;
+    }
+
+}
+
+
+/* Phone */
+
+@media (max-width: 500px) {
+
+    .photo-frame {
+        width: 180px;
+        height: 230px;
+    }
+
+    .birthday-content h2 {
+        font-size: 48px;
+    }
+
+}
+
+
+/* =========================
+   SCREEN 3
+========================= */
+
+.message-content {
+    max-width: 720px;
+}
+
+.message-content h2 {
+    font-size: clamp(50px, 7vw, 85px);
+    line-height: 0.9;
+    margin-bottom: 35px;
+}
+
+.message-content h2 span {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.main-message {
+    max-width: 600px;
+    margin: 0 auto 18px;
+
+    line-height: 1.9;
+    color: var(--soft-dark);
+
+    font-size: 15px;
+}
+
+.main-message strong {
+    color: var(--dark);
+}
+
+
+/* =========================
+   SCREEN 4
+========================= */
+
+.queen-content h2 {
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 0.9;
+    margin-bottom: 35px;
+}
+
+.queen-content h2 span {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.reason-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.reason-card {
+    background: rgba(255, 255, 255, 0.75);
+
+    border: 1px solid rgba(184, 138, 67, 0.15);
+
+    padding: 25px 18px;
+
+    border-radius: 16px;
+
+    text-align: left;
+
+    transition: transform 0.3s ease;
+}
+
+.reason-card:hover {
+    transform: translateY(-5px);
+}
+
+.reason-card span {
+    color: var(--gold);
+    font-size: 11px;
+}
+
+.reason-card h3 {
+    margin: 10px 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+}
+
+.reason-card p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--soft-dark);
+}
+
+
+/* =========================
+   SCREEN 5 - POEM
+========================= */
+
+.poem-screen {
+    background: #302624;
+    color: white;
+}
+
+.poem-content {
+    max-width: 750px;
+}
+
+.poem-screen .small-label {
+    color: #d7ad67;
+}
+
+.poem-content h2 {
+    font-size: clamp(45px, 6vw, 70px);
+    line-height: 0.9;
+    margin-bottom: 30px;
+}
+
+.poem-content h2 span {
+    color: #d7ad67;
+    font-style: italic;
+}
+
+.poem {
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 19px;
+
+    line-height: 1.65;
+}
+
+.poem p {
+    margin-bottom: 13px;
+}
+
+.poem strong {
+    color: #d7ad67;
+}
+
+.poem-screen button {
+    background: white;
+    color: var(--dark);
+}
+
+
+/* =========================
+   SCREEN 6
+========================= */
+
+.surprise-content {
+    max-width: 650px;
+}
+
+.gift-box {
+    font-size: 75px;
+    margin-bottom: 20px;
+
+    animation: floating 2.5s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.surprise-content h2 {
+    font-size: clamp(45px, 6vw, 70px);
+    line-height: 0.9;
+    margin-bottom: 30px;
+}
+
+.surprise-content h2 span {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.reveal-message {
+    max-width: 550px;
+
+    margin: 25px auto 0;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    pointer-events: none;
+
+    transition: 0.6s ease;
+}
+
+.reveal-message.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.reveal-message p {
+    line-height: 1.8;
+    color: var(--soft-dark);
+
+    margin-bottom: 20px;
+}
+
+.reveal-message h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   SCREEN 7
+========================= */
+
+.wishes-content {
+    max-width: 700px;
+}
+
+.wishes-content h2 {
+    font-size: clamp(45px, 6vw, 70px);
+    line-height: 0.9;
+    margin-bottom: 35px;
+}
+
+.wishes-content h2 span {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.wish-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.wish {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    text-align: left;
+
+    padding: 18px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border-radius: 14px;
+}
+
+.wish > span {
+    color: var(--gold);
+    font-size: 20px;
+}
+
+.wish h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 23px;
+}
+
+.wish p {
+    color: var(--soft-dark);
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+
+/* =========================
+   SCREEN 8
+========================= */
+
+.final-screen {
+    background: #302624;
+    color: white;
+}
+
+.final-content {
+    max-width: 700px;
+}
+
+.final-screen .small-label {
+    color: #d7ad67;
+}
+
+.final-content h2 {
+    font-size: clamp(55px, 8vw, 95px);
+    line-height: 0.85;
+    margin-bottom: 30px;
+}
+
+.final-content h2 span {
+    color: #d7ad67;
+    font-style: italic;
+}
+
+.final-message {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 24px;
+
+    line-height: 1.6;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    margin-bottom: 25px;
+}
+
+.final-line {
+    width: 70px;
+    height: 1px;
+
+    background: #d7ad67;
+
+    margin: 0 auto 20px;
+}
+
+
+/* NEW SIGN-OFF */
+
+.sign-off {
+    margin-top: 30px !important;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 24px !important;
+
+    color: #d7ad67 !important;
+
+    font-style: italic;
+}
+
+.final-content h3 {
+    color: #fff;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 38px;
+
+    margin-top: 5px;
+}
+
+.tiny {
+    font-size: 11px;
+
+    color: rgba(255, 255, 255, 0.5);
+
+    margin-top: 5px;
+}
+
+.replay-btn {
+    margin-top: 20px;
+
+    background: transparent;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.replay-btn:hover {
+    background: white;
+    color: var(--dark);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .progress-area {
+        top: 18px;
+        right: 18px;
+    }
+
+    .progress-line {
+        width: 50px;
+    }
+
+    .screen {
+        padding: 60px 20px 20px;
+        overflow-y: auto;
+    }
+
+    #screen1 h1 {
+        font-size: 75px;
+    }
+
+    .reason-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reason-card {
+        padding: 18px 13px;
+    }
+
+    .reason-card h3 {
+        font-size: 21px;
+    }
+
+    .reason-card p {
+        font-size: 10px;
+    }
+
+    .poem {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .wish-list {
+        grid-template-columns: 1fr;
+    }
+
+    .final-content h2 {
+        font-size: 60px;
+    }
+
+    .final-message {
+        font-size: 21px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .reason-grid {
+        gap: 8px;
+    }
+
+    .reason-card {
+        padding: 15px 10px;
+    }
+
+    .photo-frame {
+        width: 190px;
+        height: 245px;
+    }
+
+    .main-message {
+        font-size: 13px;
+    }
+
+    .poem {
+        font-size: 16px;
+    }
+}

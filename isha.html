@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Isha Queen ✨</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="isha.css">
+</head>
+
+<body>
+
+    <!-- PROGRESS -->
+    <div class="progress-area">
+        <span id="progressText">01 / 08</span>
+        <div class="progress-line">
+            <div id="progressBar"></div>
+        </div>
+    </div>
+
+
+    <!-- SCREEN 1 -->
+    <section class="screen active" id="screen1">
+
+        <div class="center-content">
+
+            <p class="small-label">A LITTLE SOMETHING FOR YOU</p>
+
+            <h1>
+                Isha<br>
+                <span>Queen</span>
+            </h1>
+
+            <p class="intro-text">
+                I could've just said<br>
+                <strong>Happy Birthday...</strong><br>
+                but where's the fun in that?
+            </p>
+
+            <button onclick="nextScreen()">
+                Open it ✨
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- SCREEN 2 -->
+    <section class="screen" id="screen2">
+
+        <div class="birthday-content">
+
+            <div class="photo-frame">
+                <img src="isha.jpg" alt="Aisha">
+            </div>
+
+            <p class="small-label">TODAY IS YOUR DAY</p>
+
+            <h2>
+                Happy Birthday,<br>
+                <span>Aisha Bello.</span>
+            </h2>
+
+            <p>
+                A little birthday surprise,<br>
+                made especially for you.
+            </p>
+
+            <button onclick="nextScreen()">
+                There's more →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- SCREEN 3 -->
+    <section class="screen" id="screen3">
+
+        <div class="message-content">
+
+            <p class="small-label">A LITTLE MESSAGE</p>
+
+            <h2>
+                You deserve<br>
+                <span>good things.</span>
+            </h2>
+
+            <p class="main-message">
+                Sometimes you meet someone and,
+                without even trying, they make
+                things feel a little better.
+            </p>
+
+            <p class="main-message">
+                You're kind, supportive, honest,
+                beautiful, and you have this
+                really cool vibe that is just...
+                <strong>you.</strong>
+            </p>
+
+            <p class="main-message">
+                And honestly, your support means
+                more than you probably realize.
+            </p>
+
+            <button onclick="nextScreen()">
+                Keep going →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- SCREEN 4 -->
+    <section class="screen" id="screen4">
+
+        <div class="queen-content">
+
+            <p class="small-label">BUT WHY "ISHA QUEEN?"</p>
+
+            <h2>
+                I think you<br>
+                <span>deserve an explanation.</span>
+            </h2>
+
+            <div class="reason-grid">
+
+                <div class="reason-card">
+                    <span>01</span>
+                    <h3>Supportive</h3>
+                    <p>
+                        You know how to make someone
+                        feel like they aren't alone.
+                    </p>
+                </div>
+
+                <div class="reason-card">
+                    <span>02</span>
+                    <h3>Kind</h3>
+                    <p>
+                        Your kindness is one of those
+                        things people remember.
+                    </p>
+                </div>
+
+                <div class="reason-card">
+                    <span>03</span>
+                    <h3>The Vibe</h3>
+                    <p>
+                        Somehow you manage to be
+                        beautiful and effortlessly cool.
+                    </p>
+                </div>
+
+                <div class="reason-card">
+                    <span>04</span>
+                    <h3>Queen Energy</h3>
+                    <p>
+                        At this point, the name
+                        just makes sense.
+                    </p>
+                </div>
+
+            </div>
+
+            <button onclick="nextScreen()">
+                Continue →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- SCREEN 5 -->
+    <section class="screen poem-screen" id="screen5">
+
+        <div class="poem-content">
+
+            <p class="small-label">FOR THE BIRTHDAY GIRL</p>
+
+            <h2>
+                A little poem<br>
+                <span>for Isha.</span>
+            </h2>
+
+            <div class="poem">
+
+                <p>
+                    If someday the moon calls you by your name,
+                    don't be surprised.
+                </p>
+
+                <p>
+                    Maybe it heard me talking about your smile,
+                    and decided it wanted to know you too.
+                </p>
+
+                <p>
+                    You're the kind of person
+                    who makes ordinary moments feel different,
+                    the kind of vibe that stays
+                    even after the conversation ends.
+                </p>
+
+                <p>
+                    So on this special day,
+                    I hope life gives you reasons to smile,
+                    opportunities that find you,
+                    and beautiful moments worth remembering.
+                </p>
+
+                <p>
+                    And if being a queen requires a crown,
+                    don't worry...
+                    <br>
+                    <strong>your vibe already did the job.</strong>
+                </p>
+
+            </div>
+
+            <button onclick="nextScreen()">
+                One more thing... →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- SCREEN 6 -->
+    <section class="screen" id="screen6">
+
+        <div class="surprise-content">
+
+            <p class="small-label">WAIT...</p>
+
+            <div class="gift-box" id="giftBox">
+                🎁
+            </div>
+
+            <h2>
+                I couldn't end it<br>
+                <span>without one surprise.</span>
+            </h2>
+
+            <button id="revealBtn">
+                Tap to reveal ✨
+            </button>
+
+            <div class="reveal-message" id="revealMessage">
+
+                <p>
+                    I hope this new chapter brings you
+                    plenty of happiness, peace, success,
+                    and genuinely good people around you.
+                </p>
+
+                <h3>
+                    You deserve good things, Isha. 🤍
+                </h3>
+
+                <button onclick="nextScreen()">
+                    Continue →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SCREEN 7 -->
+    <section class="screen" id="screen7">
+
+        <div class="wishes-content">
+
+            <p class="small-label">MY WISHES FOR YOU</p>
+
+            <h2>
+                May your new year<br>
+                <span>be beautiful.</span>
+            </h2>
+
+            <div class="wish-list">
+
+                <div class="wish">
+                    <span>✦</span>
+                    <div>
+                        <h3>Happiness</h3>
+                        <p>
+                            The kind that comes naturally.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="wish">
+                    <span>✦</span>
+                    <div>
+                        <h3>Peace</h3>
+                        <p>
+                            Even when life gets busy.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="wish">
+                    <span>✦</span>
+                    <div>
+                        <h3>Good Things</h3>
+                        <p>
+                            More than you expect.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="wish">
+                    <span>✦</span>
+                    <div>
+                        <h3>Beautiful Moments</h3>
+                        <p>
+                            Plenty of memories worth keeping.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <button onclick="nextScreen()">
+                There's one final message →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- SCREEN 8 -->
+    <section class="screen final-screen" id="screen8">
+
+        <div class="final-content">
+
+            <p class="small-label">
+                ONE LAST THING
+            </p>
+
+            <h2>
+                Happy Birthday,<br>
+                <span>Aisha Bello.</span>
+            </h2>
+
+            <p class="final-message">
+                Keep your smile.<br>
+                Keep your vibe.<br>
+                Keep being the beautiful person you are.
+            </p>
+
+            <div class="final-line"></div>
+
+            <p class="sign-off">
+                Yours truly,
+            </p>
+
+            <h3>
+                Mubarak
+            </h3>
+
+            <p class="tiny">
+             The guy who made an entire website just to say Happy Birthday 😂❤️
+            </p>
+
+            <button class="replay-btn" onclick="restartExperience()">
+                Replay ↻
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="isha.js"></script>
+
+</body>
+</html>
