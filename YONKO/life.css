@@ -1,0 +1,118 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial,sans-serif;
+    color: #263f32;
+    background-color: #f7f3ef;
+}
+nav{
+    background-color: white;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a {
+    color: #263f32;
+    text-decoration: none;
+    margin-left: 25px;
+}
+nav a :hover {
+    color: #a67c52;
+}
+.hero {
+    min-height: 600px;
+    padding: 100px 60px;
+    background-image: url(ChatGPT\ Image\ Aug\ 17\,\ 2026\,\ 07_04_28\ PM.png);
+    background-size: contain;
+    background-position: center;
+    display: block;
+    align-items: center;
+    opacity: 0.8 ;
+}
+.hero-content {
+    max-width: 550px;
+}
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+    color: #263f32;
+}
+.hero p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+button {
+    padding: 14px 30px;
+    background-color: #263f32;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #a67c52;
+
+}
+.collection {
+    padding: 70px 50px;
+    text-align: center;
+
+}
+.collection h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+.collection p {
+    margin-bottom: 40px;
+}
+.products {
+display: flex;
+justify-content: center;
+gap: 25px;
+flex-wrap: wrap;
+}
+.products-card {
+    display: flex;
+    width: 250px;
+    padding: 25px;
+    border-radius: 15px;
+     box-shadow: 0 5px 20 px rgba(0, 0, 0, 0.08);
+}
+.product-card h3 {
+margin: 15 px 0;
+}
+.product-card p {
+    color: #666;
+}
+footer {
+    background-color: #263f32;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+
+    }
+    .hero {
+        padding: 70px 25;
+        text-align: center;
+    }
+    .hero {
+        padding: 70px 25px;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 40px;
+    }
+    .collection {
+        padding: 50px 20 px;
+    }
+}
